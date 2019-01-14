@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center|top"
+        android:gravity="center_horizontal"
+        android:text="@string/received_messages" />
+
+    <Button
+        android:id="@+id/btn_send_msg1"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false"
+        android:onClick="sendMsgOne"
+        android:text="Start"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <Button
+        android:id="@+id/btn_send_msg2"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btn_send_msg1"
+        android:enabled="false"
+        android:onClick="sendMsgTwo"
+        android:text="Stop"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <Button
+        android:id="@+id/btn_sync"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btn_send_msg2"
+        android:enabled="false"
+        android:onClick="syncString"
+        android:text="@string/sync_button"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <Button
+        android:id="@+id/btn_fitScr"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btn_select_image"
+        android:enabled="false"
+        android:onClick="fitScr"
+        android:text="Fit Screen"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btn_sync"
+        android:enabled="false"
+        android:onClick="selectImage"
+        android:text="Clear"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart1"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_msg" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart2"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linechart1" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/btn_fitScr"
+        android:layout_toEndOf="@+id/btn_fitScr"
+        android:text="Save"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button" />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_send_msg1"
+        android:layout_alignParentStart="true"
+        android:ems="8"
+        android:hint="Nama File"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>
